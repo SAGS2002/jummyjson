@@ -1,8 +1,9 @@
-import { ShoppingCart, Search, LayoutGrid, ChevronDown } from 'lucide-react'
+import { ShoppingCart, UserRound } from 'lucide-react'
 import FiltroCategorias from './FiltroCategorias'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'  
 import { useState } from 'react'
+
 
 const Header = () => {
 
@@ -33,18 +34,25 @@ const manejoEnvio = (event) => {
            
            <div id="SearchInput" className='rounded-md bg-white w-3/5 ml-10 text-black'>
             <div className='bg-slate-700 text-white w-full flex'>
+            <form onSubmit={manejoEnvio} role='search' className='w-full'>
             <input value={txtbuscar} onChange={manejoTxt} type="search" placeholder='Realiza tu busqueda...' className='p-2 w-full rounded-md text-black'/>
-            <button type='submit' onSubmit={manejoEnvio} className='h-6 w-6 m-2'>
-            <Search />
-            </button>
-            </div>
+            </form>
+            </div> 
            </div>
+        <Link to={"/login"}>
+        <button action="">
+          <UserRound/>
+        </button>
+        </Link>
         </div>
+
+        
+
+
+
+
+
         <div className='bg-slate-300 text-slate-700 flex' id="SecondNav">
-
-
-
-
 
 
                 <div className="drawer z-50">
@@ -62,7 +70,6 @@ const manejoEnvio = (event) => {
                     </ul>
                   </div>
                 </div>
-
 
 
 

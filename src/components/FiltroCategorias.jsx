@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 
-const API = 'https://dummyjson.com/products/category-list';
+const API = 'https://dummyjson.com/products/categories';
 
 
 
@@ -25,9 +25,9 @@ const FiltroCategorias = () => {
   return (
     <>
       {datos && datos.map((item) => (
-        <li key={item} className="hover:bg-slate-500 rounded-md hover:text-white hover:font-bold text-slate-700">
-          <Link to={`/categorias/${item}`}>
-          {item}
+        <li key={item} className="hover:bg-slate-500 rounded-md text-white hover:text-white hover:font-bold ">
+          <Link to={`/categorias/${item.slug}`}>
+          {item.name}
           </Link>
           </li> 
       ))}

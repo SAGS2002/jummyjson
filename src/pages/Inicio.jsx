@@ -22,7 +22,7 @@ const Inicio = () => {
     <>
     <img src={banner} alt="" />
   
-    <div className='container mx-auto grid grid-cols-3 gap-4 m-5'>
+    <div className='container mx-auto grid grid-cols-3 gap-4 m-5 '>
       {datos && datos.map((item) => (
 
         <Cardinicio
