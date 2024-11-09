@@ -33,7 +33,7 @@ const manejoEnvio = (event) => {
            
            <div id="SearchInput" className='rounded-md bg-white w-3/5 ml-10 text-black'>
             <div className='bg-slate-700 text-white w-full flex'>
-            <input value={txtbuscar} onChange={manejoTxt} type="text" placeholder='Realiza tu busqueda...' className='p-2 w-full rounded-md text-black'/>
+            <input value={txtbuscar} onChange={manejoTxt} type="search" placeholder='Realiza tu busqueda...' className='p-2 w-full rounded-md text-black'/>
             <button type='submit' onSubmit={manejoEnvio} className='h-6 w-6 m-2'>
             <Search />
             </button>
@@ -42,17 +42,30 @@ const manejoEnvio = (event) => {
         </div>
         <div className='bg-slate-300 text-slate-700 flex' id="SecondNav">
 
-        <details className="dropdown ml-2">
-            <summary className="btn m-1">
-                <span><LayoutGrid className='h-4 w-4'/></span>
-                Departamentos
-                <span><ChevronDown className='h-4 w-4'/></span>
-                </summary>
-                <ul className="menu dropdown-content bg-base-100 rounded-box z-10 w-52 p-2">
-                    <Link to={"/"} className='font-bold p-2 text-white bg-slate-700 rounded-md m-2 text-center'>Todas las Categorias</Link>
-                <FiltroCategorias/>
-                </ul>
-        </details>
+
+
+
+
+
+                <div className="drawer z-50">
+                  <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+                  <div className="drawer-content">
+                    <label htmlFor="my-drawer" className="btn btn-primary drawer-button">Categorias</label>
+                  </div>
+                  <div className="drawer-side">
+                    <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+                    
+                    <ul className="menu bg-black min-h-full w-80 p-4">
+                    <label htmlFor="my-drawer" aria-label="close sidebar" className="text-5xl text-white drawer-overlay">Categorias</label>
+                    <br />  
+                     <FiltroCategorias/>
+                    </ul>
+                  </div>
+                </div>
+
+
+
+
         <div className="flex p-2 items-center text-slate-700">|</div>
 
         </div>

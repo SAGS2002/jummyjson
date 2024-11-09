@@ -30,7 +30,7 @@ const Categorias = () => {
     
     <div className="container-fluid">
     <h3 className=" text-center">Categoria {params.id} ({datos.length})</h3>
-            <div className="row grid grid-cols-3">
+            <div className="container row mx-auto grid grid-cols-3 gap-4 m-5">
                 {datos && datos.map((item)=>(
                   <Cardprod key={item.id} item={item}/>
                 ))}
